@@ -1,0 +1,3 @@
+=== HeightTest (Primitive)
+#Use this to check the scale of your model. It wont be super accurate but gets you close enough to normal.
+#Button of box should be at floor level and top of box should be in the center of the doorknob or pushbar.

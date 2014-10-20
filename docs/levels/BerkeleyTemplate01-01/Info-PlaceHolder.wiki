@@ -1,0 +1,9 @@
+=== Info-PlaceHolder (Dummy)
+Just an easier way to keep track of smaller details
+
+
+=Colors
+#BlueBG - Vec4(0.231,0.452,0.694,1)
+
+
+=

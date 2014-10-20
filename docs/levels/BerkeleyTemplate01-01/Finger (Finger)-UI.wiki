@@ -1,0 +1,2 @@
+=== Finger (Finger)
+#Used as the input event that helps to trigger the actions for buttons and navigation.

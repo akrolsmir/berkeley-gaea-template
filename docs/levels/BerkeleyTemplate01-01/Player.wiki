@@ -1,0 +1,3 @@
+=== Player (CollideCharacter)
+#This was pulled from one of the samples or testcase provided from Talansoft. I didn't do any major changes.. it is basically a copy/paste... which you can do in Gaea! pretty cool. Can even copy/paste to emails, messageboards and chats.
+#Move this entity to the point you want the Interative camera to start at.

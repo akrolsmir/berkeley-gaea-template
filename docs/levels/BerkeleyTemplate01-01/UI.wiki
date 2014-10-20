@@ -1,0 +1,4 @@
+=== UI (Layer)
+#Contains the UI text and buttons for descriptions and interaction.
+#Camera set to ortho projection type.
+#Check the comments on "Info-HowToSetUp (Dummy)" to see what to edit.

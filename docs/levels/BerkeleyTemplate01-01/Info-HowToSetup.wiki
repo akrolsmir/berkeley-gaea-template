@@ -1,0 +1,65 @@
+=== Info-HowToSetup (Dummy)
+I didn't intend for this template to be released to the public and because of that, I made some quick and dirty setup that didn't take in to account ease of use, expansion, or coherency. I am releasing this template "as-is" (it should work just fine). This is not the best way to setup a project, but it works. I did a little cleanup and commented on the key entities. It should work simply by dragging and dropping your model and changing some text. Just follow the steps below.
+
+=How to setup a new scene:
+To setup a new scene there are several things that should be edited to make this work with your new model. You will need to know how to change the UI text, where to place your imported model, and how to set up the interactive camera start point. Most everything should be set up in a way that you won't need to do any major alterations to the every action or time block. 
+
+
+=== 01. Adjusting the UI text
+If you've seen the original project that this template was use for then you would notice that before you can get to the pretty 3D model and animations, you have an option screen for selecting input type. Following the selection screen is a title screen describing the project. If you desire, you may change these screens to something more appropriate to the project you want to publish.
+
+====Select Input Type
+#First up is the "Select Input Type" screen. Generally, you shouldn't have to mess with this at all. If you do need to change something you will find the entities under "UI/SelectInputType" Under this "dummy" entity (dummies can be used like folders/containers to keep things organized or move groups of items at once if children entities have their flags set to "Relative")
+#You can find additional information on by selecting the comment icon for that entity.
+
+
+====Changing the title screen
+#The title screen has a little description about your project. You can change this by going to UI/TitleScreenTxt (Dummy).
+#You can edit the text entities that you see there or add new ones. 
+
+====Changing the UI Header
+#My project had a header that gave a short description of the scene. This was so that if a screenshot was taken that it would show up. You can get rid of this or edit it if you'd like.
+#The UI header can be found at UI/SceneHeaderTxt (Text).
+
+=== 02. Adding your model to the scene
+The majority of the structure is already setup but you will need to take some extra steps to make sure that your model works with the cameras that are already setup. If your model(s) are very large with lots of polys and textures it may be best to run the 64bit version of Gaea.
+
+
+===Add model
+#Search the library for your model. What? I was supposed to put my model somewhere? Yep, it is best to put it in your project directory to keep things organized. I usually put it under  "data." You _could_ have the files in some misc directory and Gaea is smart enough to pull it all together when you go to publish your files. 
+#The list of acceptable 3D formats are .Scene, .FBX, .OBJ, and .DAE (openCollada- not Autodesk Collada). Keep in mind that if you are using a non-standard exporter to create your model then it may not import correctly in to Gaea.
+#Drag your model on to the timeline under Scene/SceneModels(Dummy).
+#Due to the orientation of the camera you may not see where the model is. You can press the Zoom To icon under the View tab (or use hotkey Cntrl+F) to find your model easier.
+#If you don't see your model verify that the model path is correct by selecting your model on the timeline and checking the path field located under the "Character" section. It is just below the "fading" options. If the path isnt there just drag the model from the library into this field and your model should show up now. This normally is all automated but sometimes there is a hiccup in the system.
+#Check the scale. If your model is too big or too small it will affect how the movement speed is perceived. Under Scene/SceneModels there is primitive entity called "HeightTest" basically this is used for checking the distance between the floor and the door knobs because usually those are at the same height were as doors themselves can be pretty tall. So scaling based off of a door could throw the whole model off if the door is not a standard height.
+#Adjust the scale of needed. Select your model on the timeline and in the properties you can manually punch in some scale values or use the scaling too found under the Transform tab in the ribbon. Shortcut for the scaling tool is Cntrl+R
+#Collision- without this your player camera would just fall through the ground. To turn on the collision you need to have the model selected and in the properties go to physics rollout and change the "shape_type" to mesh.
+
+
+===Adjust Player Cam start point.
+# This one is easy. Go to Scene/SceneCameras and move the "Player (CollideCharacter)" to the point that you want it to start at.
+
+===Adjust the Orbit Camera.
+Sometimes the model, for whatever reason, isn't centered to the world. You can center the model manually in Gaea or you can just move the orbit target.
+#Move the orbit target by going to Scene/SceneCameras and selecting the "CamOrbitDummy(Dummy)" entity. You can select the "move" transform gizmo from the "Transform" tab in the ribbon or use the shortcut Cntrl+W.
+
+
+===Animated Camera
+Okay, this one will be tricky if you don't know your way around Gaea and/or you don't have a lot of experience working with animations. I disabled this button in the UI but you can enable it if you want to experiment. I have only tried this with 3D Studio Max and exporting in DAE (openCollada). This may be different for other 3D software and exported files.
+#So first up is that you need to add "_keep" to your animated camera name in your 3D software. This is so that when it is exported we can access it as a character node and copy the transform.
+#Drag your model from the library to your timeline and put it under Scene/SceneCameras/CamAuto. 
+#If you moved your model so that it aligns correctly with the orbit camera (instead of moving the orbit camera dummy) then you will need to move this camera to the exact same space. You can do this by copying the transform matrix from the model's properties and pasting them in to your animated model's properties. Just go to the properties and under the transform rollout you will see the position, rotation, and scale. There is a gray box at the end. Clicking that will show a vec3. Copy that and paste in to the other model.
+#Now that your models are aligned, right click on the model that has the camera animation and select "Create Node." You should see a list of available nodes. For example: "Camera001". Select your camera to create the node.
+#Update the "EntityCopyTransform" action found under Scence/SceneCameras/CamAuto by typing the name of your newly created character node (or dragging the character node) in to the "source" field.
+#You need to change the start times for a couple of entities on the timeline. First you need to change the "Player" entity under Scene/SceneCamera to start at 5sec and then change the UI gfx to also start at 5sec. You can find those at UI/UI-InputGraphics/TouchUI(and the other is KeyboardUI)/ ToolInfoInteractive-Touch(and under KeyboardUI /ToolInfoInteractive-Keyboard). Change those dummy entities and their children to 5sec. You can hold control and drag the timeline block and all the children should update, too.
+#Now, here is where it gets sticky. If you click the play button you should be able to play through the project now and see the animation when you select the AutoCam button (you did enable it, right?). You will probably notice that the rotation is off for your camera. This is part of the issue I had with using the DAE format. You can fix this by adding a dummy entity to your camera node; copy the transform matrix of the camera node and paste it into the dummy transform matrix; setting the rotation, and then setting the dummy's flag to "Relative." Now you just need to set the source of the  EntityCopyTransform action to the dummy you just made. You can make adjustments to your dummy's rotation until you get it set up right.
+
+
+=== 03. That's all, Folks!
+That should be it. I may have skipped over something, though. Just post in the comments section or email me directly. At this point you should be able to publish your file.
+
+
+
+
+=== 04. Additional notes:
+#You may want to clamp your textures on your 3D model. You can do that by selecting your model and then going to the material editor and selecting your textures. Pick "Clamp" from the Wrap type.

@@ -1,0 +1,4 @@
+=== TemplateRefModels (Dummy)
+#This is just to replace the original model that was quite big in size. 
+#You can delete this dummy entity or hide it when you are done.
+#It just gives you a visual to where the cameras line up.

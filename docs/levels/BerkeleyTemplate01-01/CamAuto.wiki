@@ -1,0 +1,2 @@
+=== CamAuto (Camera)
+#Edit this if you know what you are doing. I am leaving it here for reference.

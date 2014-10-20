@@ -1,0 +1,3 @@
+=== CamOrbitDummy (Dummy)
+#The obrit camera stuff.
+#Move this entity to set the area you want the camera to orbit.

@@ -1,0 +1,2 @@
+=== PlayButtons (TimelinePlay)
+#The UI-Buttons-CameraOptions dummy has a local timeline on it. This plays the timeline so that we can interact with the buttons. Oddly, if the timeline isn't started we wont be able to get the buttons to work.

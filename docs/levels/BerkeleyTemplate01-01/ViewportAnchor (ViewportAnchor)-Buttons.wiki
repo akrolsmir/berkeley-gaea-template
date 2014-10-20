@@ -1,0 +1,5 @@
+=== ViewportAnchor (ViewportAnchor)
+
+This is where the "magic" happens ;) the ViewportAnchor action sticks the target entity to the select anchor points of the viewport.
+
+So I stick "Buttons" and the other buttons are just relative to it.

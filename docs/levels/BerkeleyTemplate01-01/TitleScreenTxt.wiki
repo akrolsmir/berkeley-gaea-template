@@ -1,0 +1,3 @@
+=== TitleScreenTxt (Dummy)
+#Has the text entities used for the title screen. 
+#You can change them out to fit your project.

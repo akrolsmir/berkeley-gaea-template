@@ -1,0 +1,7 @@
+=== SelectInputType (Dummy)
+This is the first thing that pops up on the screen. The timeline plays and loops until keyboard or touch are selected. When an option is selected a "TimelineJumpTo" action is triggered and the time jumps to .5sec and starts to show the TitleScreen.
+#SelectInputTypeTxt(Text) - The text that is displayed in the UI that says "Select Input Type"
+#KeyboardTouch (Text) - The text entity that lables the buttons Keyboard or Touch. I just combined it in to one text entity. It may cause some problems in the future if you want to make some changes if you keep it in this format. You can put "Keyboard" and "
+Touch" in seperate entities if you want.
+#BG Header (Primitive) - This is one of the built in primitives that I use to make buttons backgrounds or in this case just a standard background for the text.
+#BG Keyboard (Primitive) - This is one of the built in primitives set to "planeHz" in the properties. Attaches is an event (RayEnter) and an action that gets triggered that jumps to a specific time and enables/disables the appropriate UI graphics.

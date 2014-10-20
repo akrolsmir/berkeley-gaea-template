@@ -1,0 +1,3 @@
+=== ButtonCamAuto (Dummy)
+#Edit this only if you know what you are doing. 
+#Range 4-5sec

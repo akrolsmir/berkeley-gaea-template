@@ -1,0 +1,3 @@
+=== Stay in the main state (TimelineJumpTo)
+
+This is just to keep the timeline in the main "fly through" mode using the main camera, it jumps to 4.1s just after the intro screem.

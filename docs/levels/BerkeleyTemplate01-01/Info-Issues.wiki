@@ -1,0 +1,8 @@
+=== Info-Issues (Dummy)
+#20140903 - Zoom to/find icon and short cut don't seem to be working
+#20140903 - Selecting entities in the same layer as an ortho camera produces a huge transform gizmo. Can not see entity to position it.
+#20140903 - Camera animation's rotation is backwards. Importing a .dae model and creating a node. I use a camera entity with a copytransfrom action that is targeting the imported camera node.
+#20140903 - Having an issue with my UI buttons. Maybe the collision is off on them using the orthographic camera. Can't figure it out and it has taken 3hrs of trying different things to make it work.
+
+===New Issues
+#20140905 - Issue with the timelinepause/stop. Throws the app out of preview mode and back in to edit mode as if using the Gaea pause and stop icons in the editor. See UI/TinelineStop action. Tried with a TimelinePause, too. Timeline pause/play/stop should be different than: "Gaea! Stop, pause, play preview."

@@ -1,0 +1,3 @@
+=== TimelineJumpTo (TimelineJumpTo)
+#This loops the time bak to zero until an input type selection is made.
+#When the timeline reaches 0.3sec the action is triggered and tells the timeline to jump back to 0sec.

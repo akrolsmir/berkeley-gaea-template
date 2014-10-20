@@ -1,0 +1,2 @@
+=== Info-Problems (Dummy)
+#20140915 - Player is sticking to the ground. It was working fine when I had the houston model. I tried a plane and a box.

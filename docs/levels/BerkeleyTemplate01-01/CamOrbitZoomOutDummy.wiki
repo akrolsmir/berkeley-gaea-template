@@ -1,0 +1,2 @@
+=== CamOrbitZoomOutDummy (Dummy)
+#Using this in conjunction with the S keyboard event and AnimMoveTo to back the camera out in orbit view.

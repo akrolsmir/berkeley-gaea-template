@@ -1,0 +1,3 @@
+=== Scene (Layer)
+#Contains the 3D models, cameras, and animations.
+#Check the comments on "Info-HowToSetUp (Dummy)" to see what to edit.

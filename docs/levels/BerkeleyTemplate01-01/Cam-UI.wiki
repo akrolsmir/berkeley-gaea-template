@@ -1,0 +1,3 @@
+=== Cam-UI (Camera)
+#This is the camera used to display the contents of the UI layer.
+#The orthogonal flag is set to give the buttons a 2D look.

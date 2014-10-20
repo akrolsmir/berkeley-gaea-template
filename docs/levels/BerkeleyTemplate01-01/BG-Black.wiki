@@ -1,0 +1,4 @@
+=== BG-Black (Primitive)
+#This is just used to fill in the background color so you don't see any 3D model coming through from the Scene layer, if there is any showing.
+#This is basically a scaled up PlaneHrz pimitive entity.
+#You can change the color by selecting the entity and changing the diffuse color in the material editor.

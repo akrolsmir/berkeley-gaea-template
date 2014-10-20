@@ -1,0 +1,5 @@
+<KronosGame name="BerkeleyTemplate01-01">
+	<LevelRegistry>
+		<LevelDesc name="BerkeleyTemplate01-01" path="levels/BerkeleyTemplate01-01.level"/>
+	</LevelRegistry>
+</KronosGame>
